@@ -1,0 +1,94 @@
+#text{
+    text-align: center;
+    font-size: 35px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#text2{
+    text-align: left;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#text11{
+    float: right;
+    font-size: 30px;
+    margin-right: 20px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#text12{
+    float: right;
+    font-size: 30px;
+    margin-right: 70px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#text13{
+    float: right;
+    font-size: 30px;
+    margin-right: 130px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#text3{
+    text-align: left;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+    margin-left: 50px;
+    
+}
+
+#text4{
+    text-align: left;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+    margin-left: 100px;
+}
+
+#hob{
+    text-align: center;
+    font-size: 35px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    
+}
+
+#inhob{
+    text-align: right;
+    margin-right: 20px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+    
+}
+
+#inhob2{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#inhob3{
+    text-align: left;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#want{
+    text-align: center;
+    font-size: 35px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#inwant{
+    text-align: left;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#inwant2{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#inwant3{
+    margin-right: 20px;
+    text-align: right;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+

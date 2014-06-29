@@ -1,0 +1,35 @@
+#incon{
+    font-family: Papyrus, fantasy;
+    margin-top: 25px;
+}
+
+#incon2{
+    font-family: Papyrus, fantasy;
+}
+
+#incon3{
+    font-family: Papyrus, fantasy;
+}
+
+#incon3:hover{
+    cursor: pointer;
+    color: white;
+}
+
+#incon3 a:visited{
+    color: black;
+}
+
+#incon4{
+    font-family: Papyrus, fantasy;
+}
+
+#incon4:hover{
+    cursor: pointer;
+    color: white;
+}
+
+#incon4 a:visited{
+    color: black;
+}
+

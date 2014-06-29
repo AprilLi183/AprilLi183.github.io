@@ -1,0 +1,93 @@
+body{
+    background-color: maroon;
+    margin: 0px;
+    height: 555%;
+}
+#top{
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    background: #b5bdc8; /* Old browsers */
+background: -moz-linear-gradient(top,  #b5bdc8 0%, #838c93 36%, #332d2d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(36%,#838c93), color-stop(100%,#332d2d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #b5bdc8 0%,#838c93 36%,#332d2d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #b5bdc8 0%,#838c93 36%,#332d2d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #b5bdc8 0%,#838c93 36%,#332d2d 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #b5bdc8 0%,#838c93 36%,#332d2d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#332d2d',GradientType=0 ); /* IE6-9 */
+
+    width: 100%;
+    height: 50px;
+    box-shadow: 3px 3px 8px black;
+    position: fixed;
+}
+#first{
+    margin-left: 20px;
+    display: inline;
+}
+#text{
+    text-align: center;
+    background-color: lightgrey;
+    width: 93%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-left: 20px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 35px;
+}
+#intext{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    padding-top: 20px;
+}
+#intext2{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    padding-top: 20px;
+}
+#intext3{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    padding-top: 20px;
+}
+#intext4{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    padding-top: 20px;
+}
+#intext5{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.other{
+    color: white;
+    font-size: 25px;
+    float: right;
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+.other:hover{
+    background-color: black;
+}
+.other:active{
+    background-color: grey;
+}
+.other a:visited{
+    color: white;
+}
+#that{
+    border-left: 1px solid black;
+    padding-left: 20px;
+    margin-right: 0px;
+}
+#second{
+    padding-left: 20px;
+    margin-right: 0px;
+}
+#third{
+    padding-left: 15px;
+    margin-right: 15px;
+}
