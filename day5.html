@@ -54,11 +54,24 @@
                     if(resp.indexOf("yes") != -1){
                         resp = prompt("What happened?");
                     }
+                    else
+                    {
+                        resp = prompt("What happened?")
+                    }
                 }
             }
-            
-            
-            
+            else
+            {
+                resp = prompt("How was your day?")
+                if(resp.indexOf("good") != -1|| resp.indexOf("great") != -1){
+                    resp = prompt("That's great!")
+                }
+                else
+                {
+                    resp = prompt("Did something bad happen?")
+                    
+                }
+            }
         </script>
     </head>
     <body>
