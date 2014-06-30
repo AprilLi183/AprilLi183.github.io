@@ -5,7 +5,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
             $(function(){
-                $('div').slideUp(3000);
+                $('div').slideDown(3000);
             });
             var x = ["unlimited", "infinite", "crazy", "awkward"];
             var randomNumber = Math.floor(Math.random() * (x.length));
@@ -22,8 +22,11 @@
                         " ever decide to " + b[randomNumber] + " our world," + " they will discover " +
                         " endless");
         </script>
+        <style>
+            div{ display: none; }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>stuff and stuff and stuff</div>
     </body>
 </html>
