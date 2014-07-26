@@ -1,14 +1,14 @@
 #incon{
-    font-family: Papyrus, fantasy;
+    font-family: "Comic Sans MS", cursive, sans-serif;// Papyrus, fantasy;
     margin-top: 25px;
 }
 
 #incon2{
-    font-family: Papyrus, fantasy;
+    font-family: "Comic Sans MS", cursive, sans-serif; //Papyrus, fantasy;
 }
 
 #incon3{
-    font-family: Papyrus, fantasy;
+    font-family: "Comic Sans MS", cursive, sans-serif; //Papyrus, fantasy;
 }
 
 #incon3:hover{
@@ -21,7 +21,7 @@
 }
 
 #incon4{
-    font-family: Papyrus, fantasy;
+    font-family: "Comic Sans MS", cursive, sans-serif;// Papyrus, fantasy;
 }
 
 #incon4:hover{
