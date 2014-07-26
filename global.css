@@ -1,5 +1,5 @@
 body{
-    background-color: maroon;
+    background-color: lightgrey;
     margin: 0px;
     height: 555%;
 }
@@ -28,7 +28,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
 }
 #text{
     text-align: center;
-    background-color: lightgrey;
+    background-color: white;
     width: 93%;
     height: 100%;
     margin: 0 auto;
