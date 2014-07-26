@@ -6,34 +6,34 @@
 
 #text2{
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 }
 
 #text11{
     float: right;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 20px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 }
 
 #text12{
     float: right;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 70px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 }
 
 #text13{
     float: right;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 130px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 }
 
 #text3{
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
     margin-left: 50px;
     
@@ -41,7 +41,7 @@
 
 #text4{
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
     margin-left: 100px;
 }
@@ -55,7 +55,7 @@
 
 #inhob{
     text-align: right;
-    margin-right: 20px;
+    margin-right: 25px;
     font-family: "Comic Sans MS", cursive, sans-serif; //Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
     
 }
