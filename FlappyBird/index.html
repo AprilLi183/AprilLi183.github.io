@@ -1,0 +1,226 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <style>
+            @font-face{
+                font-family: flappybird;
+                src: url('../../../../04B_19__.TTF');
+            }
+            #canvas{
+                font-family: flappybird;
+                height: 480px;
+                width: 640px;
+                background-color: teal;
+                position: relative;
+                overflow: hidden;
+            }
+            #bird{
+                width: px;
+                height: 70px;
+                //width: 45px;
+                //height: 32px;
+                background-image: url('../../../../poopicon.jpg');
+                position: absolute;
+                top: 50%;
+                left: 35%;
+                background-size: cover;
+                z-index: 9999999;
+            }
+            .pipe{
+                width: 75px;
+                position: absolute;
+                left: 100%;
+                background: greenyellow;
+            }
+            #score{
+                position: absolute;
+                top: 15%;
+                color: white;
+                width: 100%;
+                text-align: center;
+                font-size: 50px;
+                z-index: 9999999;
+                text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+            }
+            #scoreScreen{
+                position: relative;
+                left: -50%;
+                top: -50%;
+                background-color: orange;
+                border: 3px solid black;
+                border-radius: 5px;
+                padding: 15px;
+                z-index: 9999999;
+                font-size: 20px;
+                color: wheat;
+                text-align: center;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                var gameLoopspeed = 100;
+                var pattern = 0; 
+                var playerLost = false;
+                function gameLoop(){
+                    fall();
+                    pattern++;
+                    if(pattern % 7 == 0){
+                        addPipe();
+                    }
+                    theRealCheckCollisions();
+                    score();
+                    canvasCollision();
+                }
+                var gameLoopID = window.setInterval(gameLoop, gameLoopspeed);
+                var velocity = 0;
+                var gravity = 1;
+                var birdJumping = false;
+               
+                function fall(){
+                    if(birdJumping == false){
+                        velocity += gravity;
+                        $('#bird').animate({'top':'+='+velocity+'%'}, gameLoopspeed, "linear");
+                    }
+                }
+                function jump(){
+                    if (playerLost){
+                        return;
+                    }
+                    velocity = 0;
+                    birdJumping = true;
+                    $('#bird').stop(true).animate({'top':'-='+9+'%'}, gameLoopspeed, "linear", function(){
+                        birdJumping = false;
+                        fall();
+                    });
+                }
+                $('#canvas').click(function(){
+                    jump();
+                });
+                function addPipe(){
+                    var gap = 35;
+                    var minHeight = 20;
+                    var diffHeight = 30;
+                    var pipeSpeed = 3000;
+                    var randomHeight = Math.floor(Math.random()*diffHeight+minHeight);
+                    var bottomHeight = 100 - (gap + randomHeight);
+                    $('<div/>').css('height', randomHeight+'%')
+                            .addClass('pipe')
+                            .appendTo($('#canvas'))
+                            .animate({'left':'-100%'}, pipeSpeed, 'linear', function(){
+                                $(this).remove();
+                            });
+                    
+                    $('<div/>').css({'height':bottomHeight+'%','bottom':'0px'})
+                            .addClass('pipe')
+                            .appendTo($('#canvas'))
+                            .animate({'left':'-100%'}, pipeSpeed, 'linear', function(){
+                                $(this).remove();
+                            });
+                }
+                function checkCollisions(el1, el2){
+                    var el1Top = el1.position().top;
+                    var el1Left = el1.position().left;
+                    var el1Width = el1.width();       
+                    var el1Height = el1.height();
+                    
+                    var el2Top = el2.position().top;
+                    var el2Left = el2.position().left;
+                    var el2Width = el2.width();
+                    var el2Height = el2.height();
+                    
+                    return !(el1Left+el1Width < el2Left 
+                            || el1Top+el1Height < el2Top 
+                            || el1Left > el2Left+el2Width 
+                            || el1Top > el2Top+el2Height);
+                    //if(
+                        //(
+                            //(el1Left+el1Width >= el2Left && el1Left+el1Width <= el2Left+el2Width) &&
+                            //(el1Top <= el2Top+el2Height && el1Top >= el2Top ||
+                            //el1Top+el1Height >= el2Top && el1Top+el1Height <= el2Top+el2Height)
+                        //)
+                        //|| 
+                        //(
+                            //(el1Left <= el2Left+el2Width && el1Left >= el2Left) &&
+                            //(el1Top <= el2Top+el2Height && el1Top >= el2Top ||
+                            //el1Top+el1Height >= el2Top && el1Top+el1Height <= el2Top+el2Height)
+                        //)
+                    //)
+                }
+                function theRealCheckCollisions(){
+                    $( '.pipe' ).each(function() {
+                        var pipeLeft = $(this).position().left;
+                        if(pipeLeft <= 350){
+                            if(checkCollisions($('#bird'), $(this))){
+                                //alert("You Lost!");
+                                die();
+                            }
+                        }
+                    });
+                }
+                var lastClosestPipe = 0;
+                var theRealScore = 0;
+                function score(){
+                    var smallestDist = 9999;
+                    var closestPipe = 0;
+                    $( '.pipe' ).each(function() {
+                        var currentDist = $('#bird').position().left - ($(this).position().left+$(this).width());
+                        if(currentDist > 0 && currentDist < smallestDist){
+                           smallestDist = currentDist;
+                           closestPipe = $(this);
+                        }
+                    });
+                    if (closestPipe !== 0 && !closestPipe.is(lastClosestPipe) ) {
+                        theRealScore++;
+                        $( "#score" ).text( theRealScore ); 
+                        console.log(theRealScore);
+                    }
+                    lastClosestPipe = closestPipe;
+                }
+                function canvasCollision(){
+                    if(!checkCollisions($('#canvas'), $('#bird'))){
+                        die();
+                    }
+                }
+                function die(){
+                    clearInterval(gameLoopID);
+                    $('#bird').stop().animate({'top':'93%'}, 1000);
+                    playerLost = true;
+                    $('.pipe').stop();
+                    $('#scoreNumber').text(theRealScore);
+                    $('#scoreScreen').slideDown();
+                    $('#score').slideUp();
+                    var lastHighScore = localStorage.getItem("highScore");
+                    if(lastHighScore == null || lastHighScore < theRealScore){
+                        localStorage.setItem("highScore", theRealScore);
+                    }
+                    $('#bestNumber').text(localStorage.getItem("highScore"));
+                }
+            });
+        </script>
+        <div id="canvas">
+            <div id="bird">
+            </div>
+            <div id="score">
+                0
+            </div>
+            <div style="position:absolute; top:50%; left:50%;">
+                <div id="scoreScreen">
+                Score
+                    <div id="scoreNumber">
+                    
+                    </div>
+                Best
+                    <div id="bestNumber">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
